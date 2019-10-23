@@ -1,0 +1,534 @@
+part 1
+
+from mpl_toolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+def f(x, y):
+    return ((x**4 - x ** 2 + y ** 2 + 50))
+  
+def f2(x, y):
+    return x**4 - 2*x - y**4 + 2*y
+  
+def f3(x, y):
+    return (x ** 4 - 2*x ** 2) - (y ** 4 - 2*y ** 2)
+    
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+
+  #    
+ax.scatter([0], [0], [50], color="r")#red dot is local max
+ax.scatter([-1.41/2], [0], [50], color="b")#blues are mins
+ax.scatter([1.41/2], [0], [50], color="b")
+
+#no saddle point exists for this function
+
+
+
+ax.contour3D(X, Y, Z, 50)
+
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.705, 0, 'bo')#local mins
+plt.plot(.705, 0, 'bo')
+
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+
+ax.scatter([0], [0], [0], color="r")#red dot is local max
+ax.scatter([-.577], [0], [0], color="black")#saddle points in black
+ax.scatter([.577], [0], [0], color="black")
+
+#no local min
+
+ax.contour3D(X, Y, Z, 50)
+
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+[ ]
+from mpl_toolkits import mplot3d
+from mpl_toolkits import mplot3d
+[ ]
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+​
+[ ]
+def f(x, y):
+    return ((x**4 - x ** 2 + y ** 2 + 50))
+  
+def f2(x, y):
+    return x**4 - 2*x - y**4 + 2*y
+  
+def f3(x, y):
+    return (x ** 4 - 2*x ** 2) - (y ** 4 - 2*y ** 2)
+def f(x, y):
+    return ((x**4 - x ** 2 + y ** 2 + 50))
+  
+def f2(x, y):
+    return x**4 - 2*x - y**4 + 2*y
+  
+def f3(x, y):
+    return (x ** 4 - 2*x ** 2) - (y ** 4 - 2*y ** 2)
+​
+[ ]
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+
+  #    
+ax.scatter([0], [0], [50], color="r")#red dot is local max
+ax.scatter([-1.41/2], [0], [50], color="b")#blues are mins
+ax.scatter([1.41/2], [0], [50], color="b")
+
+#no saddle point exists for this function
+
+
+
+ax.contour3D(X, Y, Z, 50)
+
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+​
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+​
+​
+  #    
+ax.scatter([0], [0], [50], color="r")#red dot is local max
+ax.scatter([-1.41/2], [0], [50], color="b")#blues are mins
+ax.scatter([1.41/2], [0], [50], color="b")
+​
+#no saddle point exists for this function
+​
+​
+​
+ax.contour3D(X, Y, Z, 50)
+​
+​
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+
+[ ]
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.705, 0, 'bo')#local mins
+plt.plot(.705, 0, 'bo')
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+​
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+​
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.705, 0, 'bo')#local mins
+plt.plot(.705, 0, 'bo')
+
+
+[ ]
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+
+ax.scatter([0], [0], [0], color="r")#red dot is local max
+ax.scatter([-.577], [0], [0], color="black")#saddle points in black
+ax.scatter([.577], [0], [0], color="black")
+
+#no local min
+
+ax.contour3D(X, Y, Z, 50)
+
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+​
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+​
+​
+ax.scatter([0], [0], [0], color="r")#red dot is local max
+ax.scatter([-.577], [0], [0], color="black")#saddle points in black
+ax.scatter([.577], [0], [0], color="black")
+​
+#no local min
+​
+ax.contour3D(X, Y, Z, 50)
+​
+​
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+​
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+​
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.577, 0, 'bo')#local mins
+plt.plot(.577, 0, 'bo')
+
+[ ]
+from mpl_toolkits import mplot3d
+from mpl_toolkits import mplot3d
+[ ]
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+​
+[ ]
+def f(x, y):
+    return ((x**4 - x ** 2 + y ** 2 + 50))
+  
+def f2(x, y):
+    return x**4 - 2*x - y**4 + 2*y
+  
+def f3(x, y):
+    return (x ** 4 - 2*x ** 2) - (y ** 4 - 2*y ** 2)
+def f(x, y):
+    return ((x**4 - x ** 2 + y ** 2 + 50))
+  
+def f2(x, y):
+    return x**4 - 2*x - y**4 + 2*y
+  
+def f3(x, y):
+    return (x ** 4 - 2*x ** 2) - (y ** 4 - 2*y ** 2)
+​
+[ ]
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+
+  #    
+ax.scatter([0], [0], [50], color="r")#red dot is local max
+ax.scatter([-1.41/2], [0], [50], color="b")#blues are mins
+ax.scatter([1.41/2], [0], [50], color="b")
+
+#no saddle point exists for this function
+
+
+
+ax.contour3D(X, Y, Z, 50)
+
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+​
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+​
+​
+  #    
+ax.scatter([0], [0], [50], color="r")#red dot is local max
+ax.scatter([-1.41/2], [0], [50], color="b")#blues are mins
+ax.scatter([1.41/2], [0], [50], color="b")
+​
+#no saddle point exists for this function
+​
+​
+​
+ax.contour3D(X, Y, Z, 50)
+​
+​
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+
+[ ]
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.705, 0, 'bo')#local mins
+plt.plot(.705, 0, 'bo')
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+​
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+​
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.705, 0, 'bo')#local mins
+plt.plot(.705, 0, 'bo')
+
+
+[ ]
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+
+ax.scatter([0], [0], [0], color="r")#red dot is local max
+ax.scatter([-.577], [0], [0], color="black")#saddle points in black
+ax.scatter([.577], [0], [0], color="black")
+
+#no local min
+
+ax.contour3D(X, Y, Z, 50)
+
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+x = np.linspace(-3, 3, 30)
+y = np.linspace(-3, 3, 30)
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+​
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+​
+​
+ax.scatter([0], [0], [0], color="r")#red dot is local max
+ax.scatter([-.577], [0], [0], color="black")#saddle points in black
+ax.scatter([.577], [0], [0], color="black")
+​
+#no local min
+​
+ax.contour3D(X, Y, Z, 50)
+​
+​
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+
+[ ]
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+​
+X, Y = np.meshgrid(x, y)
+Z = f2(X, Y)
+​
+plt.contour(X, Y, Z, 50, cmap='RdGy');
+plt.plot(0, 0, 'go')#local max
+plt.plot(-.577, 0, 'bo')#local mins
+plt.plot(.577, 0, 'bo')
+
+
+x = np.linspace(-1, 1, 30)
+y = np.linspace(-1, 1, 30)
+X, Y = np.meshgrid(x, y)
+Z = f3(X, Y)
+​
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+​
+​
+ax.scatter([0], [0], [0], color="r")#red dot is saddle 
+ax.scatter([0], [1], [1], color="black")#local max
+ax.scatter([0], [-1], [1], color="black")
+ax.scatter([1], [0], [-1], color="blue")
+ax.scatter([-1], [0], [-1], color="blue")
+ax.contour3D(X, Y, Z, 50)
+​
+​
+​
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z');
+
+
+x = np.linspace(-1.5, 1.5, 50)
+y = np.linspace(-1.5, 1.5, 40)
+
+X, Y = np.meshgrid(x, y)
+Z = f3(X, Y)
+plt.contourf(X, Y, Z, 20, cmap='RdGy')
+plt.colorbar();
+
+
+plt.plot( 0,  0, 'go') #green is saddle
+plt.plot( 0,  1, 'ro') #red is Local Max
+plt.plot( 0, -1, 'ro')
+plt.plot( 1,  0, 'bo') #blue is Local Min
+plt.plot(-1,  0, 'bo') 
+
+
+
+part 2  
+
+%matplotlib inline
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+mpl.rc('axes', labelsize=14)
+mpl.rc('xtick', labelsize=12)
+mpl.rc('ytick', labelsize=12)
+
+import numpy as np
+np.random.seed(42)
+
+xs = 2 * np.random.rand(100, 1)
+ys = 4 + 3 * xs + np.random.rand(100, 1)
+
+plt.plot(xs, ys, "b.")
+plt.xlabel("$x_1$", fontsize=18)
+plt.ylabel("$y$", rotation=0, fontsize=18)
+plt.axis([0, 2, 0, 15])
+plt.show()
+
+# split the data into training and test sets
+# train set
+train_xs = xs[:80]
+train_ys = ys[:80]
+# test set
+test_xs = xs[80:]
+test_ys = ys[80:]
+
+# train set
+train_xs2 = xs[:80]
+# test set
+test_xs2 = xs[80:]
+
+# number of epochs
+epochs = 10
+# learning rate
+lr = 0.01
+# initial value for weight w and bias b
+w = np.random.randn(1)
+w2 = np.random.randn(1)
+
+b = np.zeros(1)
+
+for epoch in np.arange(epochs):
+  for i in np.arange(80):
+    y_pred = w * train_xs[i] + b + w2 * train_xs2[i]
+    
+    grad_w = (y_pred - train_ys[i]) * train_xs[i]
+    grad_w2 = (y_pred - train_ys[i]) * train_xs2[i]
+    grad_b = (y_pred - train_ys[i])
+    
+    w -= lr * grad_w
+    b -= lr * grad_b
+    
+    
+test_loss = 0
+for i in np.arange(20):
+  test_loss += 0.5 * (w * test_xs[i] + w2 * test_xs2[i] + b - test_ys[i]) ** 2
+test_loss /= 20
+
+test_loss
+
+pred_ys = w * test_xs + b
+
+plt.plot(test_xs, test_ys, "b.")
+plt.plot(test_xs, pred_ys, "r.") # predicted values
+plt.xlabel("$x_1$", fontsize=18)
+plt.ylabel("$y$", rotation=0, fontsize=18)
+plt.axis([0, 2, 0, 15])
+plt.show()
+
+print (" b is ")
+print (b[0])
+
+print ("w is")
+print (w[0])
+
+print ("w2 is")
+print (w2[0])
+
+
+
+
+part 3
+
+from keras.datasets import mnist
+
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+def FilterLabel_t(labels_t, x):
+  return np.where(labels_t == x)[0]
+  
+for i in range(10):
+  Mean = np.mean(train_images[FilterLabel_t(train_labels, i)], axis=0)
+  plt.figure(figsize=(4,4))
+  plt.imshow(Mean)
+  plt.show()
